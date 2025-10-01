@@ -1,4 +1,4 @@
 #!/bin/bash
 
-source $OMAKUB_PATH/bin/omakfe-sub/header.sh
-source $OMAKUB_PATH/bin/omakfe-sub/menu.sh
+source $OMAKFE_PATH/bin/omakfe-sub/header.sh
+source $OMAKFE_PATH/bin/omakfe-sub/menu.sh

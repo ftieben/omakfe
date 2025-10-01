@@ -19,13 +19,13 @@ else
 	INSTALLER=$(echo "$CHOICE" | awk -F ' {2,}' '{print $1}' | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 	case "$INSTALLER" in
-	"omakfe") INSTALLER_FILE="$OMAKUB_PATH/bin/omakfe-sub/migrate.sh" ;;
-	"ollama") INSTALLER_FILE="$OMAKUB_PATH/install/terminal/optional/app-ollama.sh" ;;
-	*) INSTALLER_FILE="$OMAKUB_PATH/install/terminal/app-$INSTALLER.sh" ;;
+	"omakfe") INSTALLER_FILE="$OMAKFE_PATH/bin/omakfe-sub/migrate.sh" ;;
+	"ollama") INSTALLER_FILE="$OMAKFE_PATH/install/terminal/optional/app-ollama.sh" ;;
+	*) INSTALLER_FILE="$OMAKFE_PATH/install/terminal/app-$INSTALLER.sh" ;;
 	esac
 
 	source $INSTALLER_FILE && gum spin --spinner globe --title "Update completed!" -- sleep 3
 fi
 
 clear
-source $OMAKUB_PATH/bin/omakfe
+source $OMAKFE_PATH/bin/omakfe

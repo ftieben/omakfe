@@ -12,7 +12,7 @@ CHOICES=(
   "Discord           Communication platform for voice, video, and text messaging"
   "Gimp              Image manipulation tool ala Photoshop"
   "Geekbench         CPU benchmaking tool"
-  "Mainline Kernels  Install newer Linux kernels than Ubuntu defaults"
+  "Mainline Kernels  Install newer Linux kernels than Fedora defaults"
   "Minecraft         Everyone's favorite blocky building game"
   "OBS Studio        Record screencasts with inputs from both display + webcam"
   "Ollama            Run LLMs, like Meta's Llama3, locally"
@@ -33,7 +33,7 @@ if [[ "$CHOICE" == "<< Back"* ]] || [[ -z "$CHOICE" ]]; then
   # Don't install anything
   echo ""
 elif [[ "$CHOICE" == "> All"* ]]; then
-  INSTALLER_FILE=$(gum file $OMAKUB_PATH/install)
+  INSTALLER_FILE=$(gum file $OMAKFE_PATH/install)
 
   [[ -n "$INSTALLER_FILE" ]] &&
     gum confirm "Run installer?" &&
@@ -43,18 +43,18 @@ else
   INSTALLER=$(echo "$CHOICE" | awk -F ' {2,}' '{print $1}' | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
   case "$INSTALLER" in
-  "dev-editor") INSTALLER_FILE="$OMAKUB_PATH/bin/omakfe-sub/install-dev-editor.sh" ;;
-  "web-apps") INSTALLER_FILE="$OMAKUB_PATH/install/desktop/optional/select-web-apps.sh" ;;
-  "dev-language") INSTALLER_FILE="$OMAKUB_PATH/install/terminal/select-dev-language.sh" ;;
-  "dev-database") INSTALLER_FILE="$OMAKUB_PATH/install/terminal/select-dev-storage.sh" ;;
-  "ollama") INSTALLER_FILE="$OMAKUB_PATH/install/terminal/optional/app-ollama.sh" ;;
-  "tailscale") INSTALLER_FILE="$OMAKUB_PATH/install/terminal/optional/app-tailscale.sh" ;;
-  "geekbench") INSTALLER_FILE="$OMAKUB_PATH/install/terminal/optional/app-geekbench.sh" ;;
-  *) INSTALLER_FILE="$OMAKUB_PATH/install/desktop/optional/app-$INSTALLER.sh" ;;
+  "dev-editor") INSTALLER_FILE="$OMAKFE_PATH/bin/omakfe-sub/install-dev-editor.sh" ;;
+  "web-apps") INSTALLER_FILE="$OMAKFE_PATH/install/desktop/optional/select-web-apps.sh" ;;
+  "dev-language") INSTALLER_FILE="$OMAKFE_PATH/install/terminal/select-dev-language.sh" ;;
+  "dev-database") INSTALLER_FILE="$OMAKFE_PATH/install/terminal/select-dev-storage.sh" ;;
+  "ollama") INSTALLER_FILE="$OMAKFE_PATH/install/terminal/optional/app-ollama.sh" ;;
+  "tailscale") INSTALLER_FILE="$OMAKFE_PATH/install/terminal/optional/app-tailscale.sh" ;;
+  "geekbench") INSTALLER_FILE="$OMAKFE_PATH/install/terminal/optional/app-geekbench.sh" ;;
+  *) INSTALLER_FILE="$OMAKFE_PATH/install/desktop/optional/app-$INSTALLER.sh" ;;
   esac
 
   source $INSTALLER_FILE && gum spin --spinner globe --title "Install completed!" -- sleep 3
 fi
 
 clear
-source $OMAKUB_PATH/bin/omakfe
+source $OMAKFE_PATH/bin/omakfe

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt install -y fzf ripgrep bat eza zoxide plocate apache2-utils fd-find tldr
+sudo dnf install -y fzf ripgrep bat zoxide plocate fd-find tldr

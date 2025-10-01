@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source $OMAKUB_PATH/install/desktop/app-wl-clipboard.sh
+source $OMAKFE_PATH/install/desktop/app-wl-clipboard.sh
