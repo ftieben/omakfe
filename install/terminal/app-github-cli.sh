@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo dnf install gh
+sudo dnf install gh -y
