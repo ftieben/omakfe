@@ -43,7 +43,7 @@ else
   INSTALLER=$(echo "$CHOICE" | awk -F ' {2,}' '{print $1}' | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
   case "$INSTALLER" in
-  "dev-editor") INSTALLER_FILE="$OMAKUB_PATH/bin/omakub-sub/install-dev-editor.sh" ;;
+  "dev-editor") INSTALLER_FILE="$OMAKUB_PATH/bin/omakfe-sub/install-dev-editor.sh" ;;
   "web-apps") INSTALLER_FILE="$OMAKUB_PATH/install/desktop/optional/select-web-apps.sh" ;;
   "dev-language") INSTALLER_FILE="$OMAKUB_PATH/install/terminal/select-dev-language.sh" ;;
   "dev-database") INSTALLER_FILE="$OMAKUB_PATH/install/terminal/select-dev-storage.sh" ;;
@@ -57,4 +57,4 @@ else
 fi
 
 clear
-source $OMAKUB_PATH/bin/omakub
+source $OMAKUB_PATH/bin/omakfe

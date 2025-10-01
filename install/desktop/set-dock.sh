@@ -15,7 +15,7 @@ apps=(
 	"md.obsidian.Obsidian.desktop"
 	"Activity.desktop"
 	"Docker.desktop"
-	"Omakub.desktop"
+	"Omakfe.desktop"
 	"1password.desktop"
 	"org.gnome.Settings.desktop"
 	"org.gnome.Nautilus.desktop"
