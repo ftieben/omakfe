@@ -4,7 +4,7 @@
 sudo update-alternatives --set x-terminal-emulator /usr/bin/alacritty
 
 # Adding alacritty to nautilus contextual menu requires the python wrapper for the libraries
-sudo apt install -y python3-nautilus
+sudo dnf install -y nautilus-python
 mkdir -p ~/.local/share/nautilus-python/extensions/
 
 cat > ~/.local/share/nautilus-python/extensions/open-alacritty.py <<TECHNICALLYNOTACONFIGSOHEREDOCCEDITIS

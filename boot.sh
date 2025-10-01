@@ -15,7 +15,7 @@ echo "=> Omakfe is for fresh Fedora 42 installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
 sudo dnf update -y>/dev/null
-sudo apt-get install -y git >/dev/null
+sudo dnf install -y git >/dev/null
 
 echo "Cloning Omakfe..."
 rm -rf ~/.local/share/omakfe
