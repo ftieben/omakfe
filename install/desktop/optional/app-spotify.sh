@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo flatpak install com.spotify.Client
+sudo flatpak install -y com.spotify.Client
